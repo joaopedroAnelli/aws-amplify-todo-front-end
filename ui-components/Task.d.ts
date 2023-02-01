@@ -6,13 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CheckboxFieldProps, FlexProps } from "@aws-amplify/ui-react";
+import { CheckboxFieldProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type TaskOverridesProps = {
-    Task?: PrimitiveOverrideProps<FlexProps>;
+    Task?: PrimitiveOverrideProps<ViewProps>;
     CheckboxField?: PrimitiveOverrideProps<CheckboxFieldProps>;
 } & EscapeHatchProps;
-export declare type TaskProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type TaskProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: TaskOverridesProps | undefined | null;
 }>;
 export default function Task(props: TaskProps): React.ReactElement;

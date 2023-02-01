@@ -1,19 +1,14 @@
 import '@aws-amplify/ui-react/styles.css';
 import './App.css';
-import TaskCreateForm from '../ui-components/TaskCreateForm';
+import { Heading } from '@aws-amplify/ui-react';
+import Task from '../ui-components/Task';
 
 function App() {
   return (
     <div className='App'>
-      <TaskCreateForm
-        onSubmit={(fields) => {
-          console.log(fields);
+      <Heading level={1}>Tarefas</Heading>
 
-          return {
-            title: 'Topppp',
-          };
-        }}
-      />
+      <Task />
     </div>
   );
 }

@@ -7,33 +7,39 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { CheckboxField, Flex } from "@aws-amplify/ui-react";
+import { CheckboxField, View } from "@aws-amplify/ui-react";
 export default function Task(props) {
   const { overrides, ...rest } = props;
   return (
-    <Flex
-      gap="16px"
-      direction="row"
-      width="unset"
-      height="unset"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+    <View
+      width="255px"
+      height="62px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       overflow="hidden"
       position="relative"
-      padding="16px 16px 16px 16px"
+      padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...getOverrideProps(overrides, "Task")}
       {...rest}
     >
       <CheckboxField
         label="Taskname"
-        shrink="0"
+        width="255px"
+        height="62px"
+        justifyContent="space-between"
+        position="absolute"
+        padding="16px 16px 16px 16px"
+        top="0px"
+        left="0px"
         size="large"
         defaultChecked={true}
         isDisabled={false}
         labelPosition="start"
         {...getOverrideProps(overrides, "CheckboxField")}
       ></CheckboxField>
-    </Flex>
+    </View>
   );
 }
