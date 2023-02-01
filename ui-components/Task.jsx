@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { CheckboxField, View } from "@aws-amplify/ui-react";
 export default function Task(props) {
-  const { overrides, ...rest } = props;
+  const { task, onClick, overrides, ...rest } = props;
   return (
     <View
       width="255px"
@@ -26,7 +26,7 @@ export default function Task(props) {
       {...rest}
     >
       <CheckboxField
-        label="Taskname"
+        label={task?.title}
         width="255px"
         height="62px"
         justifyContent="space-between"

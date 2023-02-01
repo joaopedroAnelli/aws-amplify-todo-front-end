@@ -8,7 +8,7 @@ function App() {
     <div className='App'>
       <Heading level={1}>Tarefas</Heading>
 
-      <Task />
+      <Task task={{ title: 'Teste 1', id: 'ladkfklajkldf' }} />
     </div>
   );
 }
